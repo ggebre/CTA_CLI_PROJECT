@@ -2,10 +2,10 @@
 class FetchData
     attr_accessor :url
     def fetch_station_data
-        # uri = URI.parse(self.url)
-        # response = Net::HTTP.get_response(uri)
+        uri = URI.parse(self.url)
+        response = Net::HTTP.get_response(uri)
 
-         response = HTTParty.get(self.url)
+        # response = HTTParty.get(self.url)
         response.body
     end
 

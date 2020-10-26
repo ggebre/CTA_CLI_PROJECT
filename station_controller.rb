@@ -3,9 +3,6 @@ class StationController
     #valid route should return all the name of the stops 
     # include StationModule::InstanceMethods 
     attr_accessor :route, :json_data, :depart_from, :station_id
-    def self.all
-        Station.all
-    end
     
 
     # NEW ADDITION
@@ -41,7 +38,9 @@ class StationController
         routes_stops_for_a_route.each {|station| puts station.name} 
     end
     # END
-
+    def self.reset 
+        Station.reset
+    end
 
     
     # ARRIVAL TIMES FOR A GIVEN STATION_ID AND ROUTE 

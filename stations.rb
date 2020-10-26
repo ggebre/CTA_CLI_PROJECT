@@ -51,7 +51,9 @@ class Station
         stations = self.all.select {|station| station.id == id}
         
     end
-    # select all the trains arriving at a station 
+    def self.reset
+        self.all.clear
+    end
     
 end
 
